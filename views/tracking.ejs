@@ -5,8 +5,8 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
-                    <span class="text-gradient">New User <i class="fas fa-dumbell"></i></span>
+                <a href="/add-exercise" class="border-shadow">
+                    <span class="text-gradient">Add Exercise <i class="fas fa-dumbell"></i></span>
                 </a>
             </div>
 
@@ -16,19 +16,19 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>@Email</th>
-                            <th>Gender</th>
-                            <th>Status</th>
+                            <th>Exercise Type</th>
+                            <th>Duration</th>
+                            <th>Sets/Reps/Laps</th>
+                            <th>Cals Burned</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <%- include('include/_show') %>
+                        <%- include('partials/display_table') %>
                     </tbody>
                 </table>
             </form>
         </div>
     </main>
 
-<%- include('partials/header') %>
+<%- include('partials/footer') %>
