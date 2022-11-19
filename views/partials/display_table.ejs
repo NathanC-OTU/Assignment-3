@@ -1,10 +1,15 @@
-<td>1</td>
-<td>Calves</td>
-<td>5 min</td>
-<td>10</td>
-<td>100</td>
-<td>
-    <a href="#" class="btn border-shadow update"></a>
-        <span class="text-gradient"><i class="fa-thin fa-pen"></i></span>
-</td>
+<% for(var i = 0; i < exercise_instance.length; i++) { %>
 
+<td><%= i+1 %></td>
+<td><%= exercise_instance[i].exercise_type %></td>
+<td><%= exercise_instance[i].duration %></td>
+<td><%= exercise_instance[i].srl %></td>
+<td><%= exercise_instance[i].cals %></td>
+<td>
+    <a href="/update-exercise" class="btn border-shadow update"></a>
+        <span class="text-gradient"><i class="fa-thin fa-pen"></i></span>
+    
+    <a href="#" class="btn border-shadow delete"></a>
+        <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+</td>
+<% } %>

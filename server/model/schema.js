@@ -11,9 +11,9 @@ var schema = new mongoose.Schema({
         required: true
     },
 
+    //shourthand for "Sets Reps Laps"
     srl: {
         type: String,
-        required: true
     },
 
     cals: {
