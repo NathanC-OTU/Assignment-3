@@ -1,9 +1,18 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const morgan = require('morgan');
+const path = require('path')
+const router = express();
 
-const app = express();
+//view engine
+router.set("view engine", "ejs")
 
-app.get('/', (req,res)=>{
-    res.send("CRUD assignemtn web and script")
-})
+//asset load
+router.use('/css', express.static(path.resolve(__dirname, "assets/css")))
+router.use('/js', express.static(path.resolve(__dirname, "assets/js")))
+router.use('/images', express.static(path.resolve(__dirname, "assets/images")))
+router.use('/', require('./server/routes/routes'))
 
-app.listen(3000, () => {console.log(`Server is running on http://localhost:${3000}`)});
+
+router.listen(3000, () => {console.log(`Server is running on http://localhost:${3000}`)});
+module.exports = router;
