@@ -18,7 +18,7 @@ exports.create = (req,res) => {
 
     //save instance in db
     exercise_instance
-        .save(exerciseDB)
+        .save(exercise_instance)
         .then(data => {
             res.redirect('/tracking');
         })
@@ -44,8 +44,8 @@ exports.find = (req, res) => {
 
     }else{
         exerciseDB.find()
-            .then(user => {
-                res.send(user)
+            .then(exercise_instance => {
+                res.send(exercise_instance)
             })
             .catch(err => {
                 res.status(500).send({ message : err.message || "Error Occurred while retriving information" })

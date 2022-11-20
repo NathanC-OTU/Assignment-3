@@ -6,14 +6,37 @@
             <div class="filter">
                 <a href="/tracking"><i class="fas fa-angle-double-left"></i> Return to Tracker</a>
             </div>
-            </div>
+
             <div class="form-title text-center">
                 <h2 class="text-dark">Update Exercise</h2>
                 <span class="text-light">Use the form below to change or update the entry</span>
             </div>
 
-            <!-- add exercise form here -->
-            <%- include('partials/form') %>
+            <form action="/api/exercise_instance" method="POST" id="update_exercise">
+                <div class="new_exercise">
+                    <div class="form-group">
+                        <label for="exercise_type" class="text-light">Exercise Type</label>
+                        <input type="text" name="exercise_type" value="<%= exercise_instance.exercise_type%>" placeholder="Push-ups">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration" class="text-light">Duration</label>
+                        <input type="text" name="duration" value="<%= exercise_instance.duration%>" placeholder="5 mins">
+                    </div>
+                    <div class="form-group">
+                        <label for="srl" class="text-light">Sets/Reps/Laps</label>
+                        <input type="text" name="srl" value="<%= exercise_instance.srl%>" placeholder="5 sets">
+                    </div>
+                    <div class="form-group">
+                        <label for="cals" class="text-light">Cals Burnt</label>
+                        <input type="text" name="cals" value="<%= exercise_instance.cals%>" placeholder="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+            
+                </div>
+            </form>
         
         </div>
     </main>

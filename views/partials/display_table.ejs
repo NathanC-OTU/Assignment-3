@@ -1,3 +1,4 @@
+<!-- displays all instances and logs using a for loop -->
 <% for(var i = 0; i < exercise_instance.length; i++) { %>
 
 <td><%= i+1 %></td>
@@ -6,10 +7,11 @@
 <td><%= exercise_instance[i].srl %></td>
 <td><%= exercise_instance[i].cals %></td>
 <td>
-    <a href="/update-exercise" class="btn border-shadow update"></a>
+    <!-- updates / deletes a specific ID  -->
+    <a href="/update-exercise?id=<%= exercise_instance[i]._id%> " class="btn border-shadow update"></a>
         <span class="text-gradient"><i class="fa-thin fa-pen"></i></span>
     
-    <a href="#" class="btn border-shadow delete"></a>
+    <a href="#" class="btn border-shadow delete" data-id = <%= exercise_instance[i]._id%>></a>
         <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
 </td>
 <% } %>
