@@ -8,10 +8,11 @@
 <td><%= exercise_instance[i].cals %></td>
 <td>
     <!-- updates / deletes a specific ID  -->
-    <a href="/update-exercise?id=<%= exercise_instance[i]._id%> " class="btn border-shadow update"></a>
-        <span class="text-gradient"><i class="fa-thin fa-pen"></i></span>
-    
-    <a href="#" class="btn border-shadow delete" data-id = <%= exercise_instance[i]._id%>></a>
-        <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+    <a href="/update-exercise?id=<%= exercise_instance[i]._id%> " class="button_action update">
+        <span class="text-color"><i class="fas fa-thin fa-pen"></i></span>
+    </a>
+    <a href="#" class="button_action delete" data-id = <%= exercise_instance[i]._id%>>
+        <span class="text-color"><i class="fas fa-solid fa-trash"></i></span>
+    </a>
 </td>
 <% } %>

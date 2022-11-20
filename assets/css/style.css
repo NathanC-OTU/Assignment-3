@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 :root{
-    --dark: #2b2d42;
-    --light: #adb5bd;
-    --border: #dee2e6;
-    --border-btn: #edf2f4;
+    --light: white;
+    --border: white;
+    --border-btn: white;
 }
 
 body {
-    background-color: #0e1011ff;
+    background-image: url("/images/gym.png");
 }
 
 * {
@@ -18,8 +17,9 @@ body {
 }
 
 a {
+    color: white;
     text-decoration: none;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Electrolize', sans-serif;
 }
 
 .container{
@@ -27,9 +27,18 @@ a {
     margin: auto;
 }
 
+.center-align-entry{
+    text-align: center;
+    padding: 10%;
+}
+
+.entry-button{
+    font-size: 50px;
+}
+
 .header-text{
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -63,11 +72,12 @@ a {
     color: var(--light);
 }
 
-.text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.text-color-btn1{
+    color: white;
+}
+
+.text-color{
+    color: black;
 }
 
 #header nav{
@@ -78,7 +88,12 @@ a {
 
 #site-main{
     margin-top: 6em;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Electrolize', sans-serif;
+}
+
+#site-main .container .box-nav > a{
+    font-size: 1em;
+    padding: .5em 1em;
 }
 
 #site-main .container .box-nav > a{
@@ -96,6 +111,7 @@ table{
 }
 
 .table td, .table th{
+    background-color: white;
     padding: .75em;
     vertical-align: top;
     text-align: center;
@@ -124,6 +140,7 @@ table{
 
 
 .form-title{
+    color: white;
     margin-top: 2em;
 }
 
@@ -147,7 +164,7 @@ table{
     padding: .6em 1em;
     margin: .5em 0;
     border: 1px solid var(--border);
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Electrolize', sans-serif;
     font-size: 1em;
     border-radius: .2em;
 }
@@ -163,15 +180,10 @@ table{
     padding: .9em 1em;
     background-color:#16db93; 
     border: none;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Electrolize', sans-serif;
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
     margin: .5em 0;
 }
 
-#update_exercise .form-group .btn:hover,
-#add_exercise .form-group .btn:hover{
-    background-color: var(--dark);
-    color: var(--border);
-}
