@@ -10,7 +10,7 @@ var schema = new mongoose.Schema({
 
     },
 
-    //shourthand for "Sets Reps Laps"
+    //shorthand for "Sets Reps Laps"
     srl: {
         type: String,
     },
@@ -21,5 +21,6 @@ var schema = new mongoose.Schema({
 
 })
 
+// export schema
 const exerciseDB = mongoose.model('exerciseDB', schema)
 module.exports = exerciseDB

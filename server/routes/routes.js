@@ -3,6 +3,8 @@ var control = require('../control/control.js');
 var router = express.Router();
 var axios = require('axios');
 
+
+//splash page
 router.get('/', (req,res)=>{
     res.render('index.ejs', {});
 });
@@ -22,11 +24,12 @@ router.get('/tracking', (req,res)=>{
     })
 });
 
+//add entry / exercise page
 router.get('/add-exercise', (req,res)=>{
     res.render('add_exercise.ejs', {});
 })
 
-//routing for main tracking page, also passes information and data
+//routing for main update page, also passes information and data
 router.get('/update-exercise', (req,res)=>{
     axios.get('http://localhost:3000/api/exercise_instance',  {params:{id : req.query.id}})
         .then(function(exerdata){
